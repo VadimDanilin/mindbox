@@ -62,7 +62,15 @@ function App() {
           }
         })}
         <div className='options'>
-          <div>{tasks.filter(({done}) => !done).length} items left</div>
+          <div>{tasks.filter(({done}) => {
+            if (filter === 'all') {
+              return 1
+            } else if (filter === 'active' && !done) {
+              return 1
+            } else if (filter === 'completed' && done) {
+              return 1
+            }
+          }).length} items left</div>
           <div className='options__filter'>
             <button
               className={`options__button ${filter === 'all' ? 'options__button--active' : ''}`}
