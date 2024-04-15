@@ -1,0 +1,43 @@
+.task {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 20px;
+  border-top: 2px solid #e4e4e4;
+  user-select: none;
+  cursor: pointer;
+}
+
+.task__chechbox {
+  display: none;
+}
+
+.task__name {
+  display: block;
+}
+.task__new-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.task__chechbox:checked + .task__new-checkbox .task__name {
+  text-decoration: line-through;
+  color: #bbbbbb;
+}
+.task__new-checkbox::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #bbbbbb;
+}
+
+.task__chechbox:checked + .task__new-checkbox::before {
+  content: "✔";
+  color: #77c0af;
+}
