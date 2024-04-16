@@ -1,0 +1,19 @@
+.input-task {
+  padding: 15px 20px;
+  font-size: 20px;
+  border: none;
+  width: 100%;
+}
+
+.input-task::-webkit-input-placeholder {
+  font-style: italic;
+}
+.input-task:-moz-placeholder {
+  font-style: italic;  
+}
+.input-task::-moz-placeholder {
+  font-style: italic;  
+}
+.input-task:-ms-input-placeholder {  
+  font-style: italic; 
+}
